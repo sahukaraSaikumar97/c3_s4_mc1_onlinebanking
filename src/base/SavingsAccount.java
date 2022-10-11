@@ -7,7 +7,7 @@ public class SavingsAccount extends BankAccount {
         super(accountNumber, accountOpeningDate, modeOfOperation, internetBanking, totalBalance, avilableBalance, rateOfIntrest);
     }
     public double deposit(int depositAmount){
-        double response =0;
+        double response;
         response = getAvilableBalance()+depositAmount;
         setAvilableBalance(response);
         return getAvilableBalance();
@@ -24,14 +24,17 @@ public class SavingsAccount extends BankAccount {
         }
         return getAvilableBalance();
     }
+
+
     public void display(){
         System.out.println(" Details of Savings Account ");
         System.out.println("Avialble Balance = "+getAvilableBalance());
         System.out.println("Account Number = "+getAccountNumber());
         System.out.println("Account Opening Date = "+getAccountOpeningDate());
-        System.out.println("Total Balance = "+getTotalBalance());
+        System.out.println("Opening Balance = "+getTotalBalance());
         System.out.println("Mode Of Operation = "+getModeOfOperation());
         System.out.println("isInternetBanking = " + isInternetBanking());
+
 
     }
 

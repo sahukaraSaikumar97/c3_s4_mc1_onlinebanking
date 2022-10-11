@@ -37,7 +37,7 @@ public class RecurringDepositAccount extends BankAccount{
             System.out.println("Mode Of Operation = "+getModeOfOperation());
             System.out.println("Rate of Intrest = "+getRateOfIntrest());
             System.out.println("Closing Date = "+getClosingDate());
-            System.out.println("Duration = "+getDuration());
+            System.out.println("Duration in months = "+getDuration());
 
     }
 

@@ -1,7 +1,7 @@
 package base;
 
 public abstract class BankAccount {
-    private long accountNumber;
+    static long accountNumber;
     private String accountOpeningDate;
     private String modeOfOperation;
     private boolean internetBanking;
@@ -28,9 +28,7 @@ public abstract class BankAccount {
         return accountNumber;
     }
 
-    public void setAccountNumber(long accountNumber) {
-        this.accountNumber = accountNumber;
-    }
+
 
     public String getAccountOpeningDate() {
         return accountOpeningDate;
@@ -78,6 +76,11 @@ public abstract class BankAccount {
 
     public void setRateOfIntrest(double rateOfIntrest) {
         this.rateOfIntrest = rateOfIntrest;
+    }
+    public static long accNumberGen(){
+        accountNumber = (long) (Math.random()*1000000000000L);
+        //System.out.println("accountNumber = " + accountNumber);
+        return accountNumber;
     }
 }
 
